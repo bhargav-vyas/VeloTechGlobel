@@ -1,0 +1,58 @@
+@use "../../styles/variables" as *;
+
+.navbar {
+  height: 80px;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-subtle;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  span {
+    font-weight: 800;
+    color: $brand-primary;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-weight: 600;
+    color: $text-main;
+  }
+}
+
+nav {
+  display: flex;
+  gap: 2.5rem;
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: $text-muted;
+    font-size: 0.95rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: $brand-primary;
+      transition: width 0.25s ease;
+    }
+
+    &:hover {
+      color: $text-main;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
