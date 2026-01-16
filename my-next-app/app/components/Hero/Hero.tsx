@@ -12,7 +12,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h1>Building Secure Digital Solutions</h1>
+        {/* <h1>Building Secure Digital Solutions</h1> */}
         <p>
           Enterprise-grade technology services designed for scale, security,
           and long-term growth.
